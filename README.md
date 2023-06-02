@@ -1,2 +1,3 @@
 # map-chart
-map and charts datavisualization
+
+Visualization of geographic data with map and charts.
