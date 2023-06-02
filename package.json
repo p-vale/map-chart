@@ -40,6 +40,7 @@
     "apexcharts": "^3.40.0",
     "leaflet": "^1.9.4",
     "react-apexcharts": "^1.4.0",
+    "react-leaflet": "^4.2.1",
     "turf": "^3.0.14"
   }
 }
