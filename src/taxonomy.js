@@ -35,8 +35,8 @@ export const taxonomy = {
         name: "Scolastico",
         type: {
           70301: "Scuola Secondaria di Secondo Grado",
-          70302: "Scuole Primaria",
-          70303: "Scuole Secondarie di Primo Grado",
+          70302: "Scuola Primaria",
+          70303: "Scuola Secondaria di Primo Grado",
         }
       },
       704: {
@@ -53,7 +53,7 @@ export const taxonomy = {
       803: {
         name: "Commercio ambulante",
         type: {
-          80301: "Mercati",
+          80301: "Mercato",
         },
       },
     },
