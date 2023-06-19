@@ -51,7 +51,7 @@ const CheckCategory = (props) => {
     <Wrapper id={props.category + "-toggle"}>
       <div>
           <CheckInput type="checkbox" id={props.category} name={props.category} value={props.category} />
-          <label for={props.category}>{props.category}</label>
+          <label htmlFor={props.category}>{props.category}</label>
       </div>
       <BufferSwitch>
           <input type="checkbox" id={"buff" + props.category} />

@@ -20,3 +20,8 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}

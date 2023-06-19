@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import styled from "styled-components"
+import Accordion from "./menu/Accordion"
 import Score from "./menu/Score"
 import CheckCategory from "./menu/CheckCategory"
 import CheckClass from "./menu/CheckClass"
@@ -6,11 +8,10 @@ import CheckClass from "./menu/CheckClass"
 const Wrapper = styled.div`
   height: 100vh;
   max-width: 25%;
-  padding: 20px;
 `
 const List = styled.ul`
   list-style: none;
-  padding: 0px;
+  padding: 1rem;
 `
 const SubList = styled.ul`
   list-style: none;
@@ -18,11 +19,18 @@ const SubList = styled.ul`
 `
 
 const Menu = () => {
+  const [filters, setFilters] = useState(false);
+  const [services, setServices] = useState(false);
   return(
     <Wrapper>
-      <Score />
-      <h3>SERVICES</h3>
-      <List>
+      <div onClick={() => {setFilters(filters => !filters)}} >
+        <Accordion title="FILTERS" isOpen={filters}/>
+      </div>
+      { filters && <Score />}
+      <div onClick={() => {setServices(services => !services)}} >
+        <Accordion title="SERVICES" isOpen={services}/>
+      </div>
+      { services && <List>
         <li>
           <CheckCategory category="test" />
           <SubList>
@@ -32,6 +40,7 @@ const Menu = () => {
         </li>
         <CheckCategory category="another layer" />
       </List>
+      }
       
     </Wrapper>
   )

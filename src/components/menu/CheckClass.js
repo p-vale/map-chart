@@ -14,7 +14,7 @@ const CheckClass = (props) => {
   return(
     <Wrapper id={props.class + "-toggle"}>
         <CheckInput type="checkbox" id={props.class} name={props.class} value={props.class} />
-        <label for={props.class}>{props.class}</label>
+        <label htmlFor={props.class}>{props.class}</label>
     </Wrapper>
   )
 }

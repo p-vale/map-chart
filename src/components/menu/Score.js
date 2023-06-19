@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  padding: 1rem;
+`
 
 const MinMax = styled.div`
   height: 15px;
@@ -61,8 +63,8 @@ const Range = () => {
           <Progress />
       </Slider>
       <RangeInput>
-        <input type="range" class="range-min" name="min-score" min="0" max="1" value="0" step=".01" />
-        <input type="range" class="range-max" name="max-score" min="0" max="1" value="1" step=".01" />
+        <input type="range" name="min-score" min="0" max="1" defaultValue="0" step=".01" />
+        <input type="range" name="max-score" min="0" max="1" defaultValue="1" step=".01" />
       </RangeInput>
     </Wrapper>
   )
