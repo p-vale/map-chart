@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -33,6 +34,7 @@ const Toggle = styled.span`
     border-radius: 20px;
     -webkit-transition: .4s;
     transition: .4s;
+    background-color: {checked ? "red" : "blue"};
   :before {
     position: absolute;
     content: "";
@@ -47,6 +49,7 @@ const Toggle = styled.span`
 `
 
 const CheckCategory = (props) => {
+  const [checked, setChecked] = useState(false);
   return(
     <Wrapper id={props.category + "-toggle"}>
       <div>
@@ -55,7 +58,7 @@ const CheckCategory = (props) => {
       </div>
       <BufferSwitch>
           <input type="checkbox" id={"buff" + props.category} />
-          <Toggle/>${'' /* <Toggle {backgroundColor={input:checked ? "black" : "white"}} /> */}
+          <Toggle isOpen={checked} onClick={() => {setChecked(checked => !checked)}} />
       </BufferSwitch>
     </Wrapper>
   )
