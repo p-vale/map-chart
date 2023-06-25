@@ -167,3 +167,6 @@ export const taxonomy = {
     },
   }
 }
+
+
+export default taxonomy;

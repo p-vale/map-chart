@@ -34,7 +34,7 @@ const Toggle = styled.span`
     border-radius: 20px;
     -webkit-transition: .4s;
     transition: .4s;
-    background-color: {checked ? "red" : "blue"};
+    background-color: {isOpen ? "red" : "blue"};
   :before {
     position: absolute;
     content: "";
